@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Profile</title>
+</head>
+<body>
+    <h2>Edit Profile</h2>
+
+    {% for message in messages %}
+      <p style="color:green">{{ message }}</p>
+    {% endfor %}
+
+    <form method="post">
+        {% csrf_token %}
+        <label>Email:</label><br>
+        <input type="email" name="email" value="{{ request.user.email }}" required><br><br>
+        <button type="submit">Update</button>
+    </form>
+
+    <br>
+    <a href="/accounts/dashboard/">Back to Dashboard</a>
+</body>
+</html>
