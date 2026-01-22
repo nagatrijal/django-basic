@@ -13,8 +13,8 @@ jobs:
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.0
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
+          host: 3.111.196.110
+          username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ec2-user/django-basic
