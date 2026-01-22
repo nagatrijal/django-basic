@@ -11,7 +11,7 @@ SECRET_KEY = 'django-insecure-5c*bmp+!mcozftt!hdf9=&cb16i4$r-aa=ea!j+@9m+b=crma5
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -57,10 +57,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django_db',
-        'USER': 'root',
-        'PASSWORD': 'trijal@2105',
-        'HOST': 'localhost',
+        'USER': 'django_user',
+        'PASSWORD': 'StrongPassword123!',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
+        'Options': {
+            'unix_socket': None,
+        },
     }
 }
 
